@@ -1,5 +1,5 @@
 import styles from './Hero.module.css'
-import Button from '../Button'
+import Button from '../button/Button'
 import global from '../../assets/img/global_data_visualization.png'
 
 function Hero() {
