@@ -1,13 +1,12 @@
 import './App.css'
-import Button from './components/Button'
+import Hero from './components/hero/Hero'
 
 function App() {
 
   return (
     <>
+      <Hero/>
       <p>Disease</p>
-      <Button fill>Get Started</Button>
-      <Button>View Demo</Button>
     </>
   )
 }
