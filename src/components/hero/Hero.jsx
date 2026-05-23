@@ -13,11 +13,8 @@ function Hero() {
             <Button>View Demo</Button>
         </div>
     </section>
-    <section>
-        <div className={styles.ctImg}>
-            <img src={global} alt="globe over data analysis charts" />
-        </div>
-        
+    <section className={styles.ctImage}>
+        <img src={global} alt="globe over data analysis charts" />
     </section>
     </>
   )

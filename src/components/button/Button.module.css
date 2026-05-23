@@ -4,15 +4,18 @@
     font-weight: bold;
 }
 
+.btMain:hover {
+    transform: scale(0.95);
+}
+
 .btFill{
     background-color: var(--blue-color);
     color: var(--light-color);
-    border: none;
-    
+    border: none;   
 }
 
 .btOutline{
-    background-color: transparent;
+    background-color: white;
     color: var(--grey-color);
-    border: 1px solid var(--grey-color);
+    border: 1px solid var(--light-grey-color);
 }

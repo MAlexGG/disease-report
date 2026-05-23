@@ -1,0 +1,61 @@
+.ctStartNow{
+    display: flex;
+    gap: 5%;
+    width: 90%;
+    background-color: var(--light-color);
+    border-radius: 20px;
+    padding: 50px;
+    margin: 50px;
+}
+
+.ctStartNow h2{
+    font-size: var(--l-font);
+    margin: 0;
+}
+
+.ctTextSection{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 50%;
+}
+
+.ctCardsSection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 50%;
+}
+
+.ctButtons{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+.ctCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 230px;
+    height: 90px;
+    background-color: white;
+    border: 1px solid var(--light-grey-color);
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 3px 3px 7px rgba(var(--transparency-grey));
+}
+
+.ctCard p{
+    margin: 0;
+}
+
+.ctCard p:first-child {
+    font-size: var(--m-font);
+    font-weight: bold;
+    color: var(--red-color);
+}

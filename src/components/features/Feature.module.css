@@ -10,6 +10,7 @@
     width: 27%;
     height: 300px;
     text-align: start;
+    box-shadow: 3px 3px 7px rgba(var(--transparency-grey));
 }
 
 .ctFeature h5{
