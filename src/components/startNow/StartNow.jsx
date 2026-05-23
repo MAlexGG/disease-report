@@ -1,5 +1,6 @@
 import styles from './StartNow.module.css'
 import Button from '../button/Button'
+import { useResponsive } from '../../hooks/useResponsive'
 
 const data = [
     {
@@ -21,6 +22,10 @@ const data = [
 ]
 
 function StartNow() {
+
+    const { isMobile } = useResponsive();
+
+
   return (
     <section className={styles.ctStartNow}>
         <div className={styles.ctTextSection}>
@@ -31,7 +36,9 @@ function StartNow() {
                 <Button>View Documentation</Button>
             </div>
         </div>
-        <div className={styles.ctCardsSection}>
+        {
+            !isMobile &&
+            <div className={styles.ctCardsSection}>
             {
                 data.map((e, index) => (
                     <div className={styles.ctCard}>
@@ -40,7 +47,9 @@ function StartNow() {
                     </div>
                 ))
             }
-        </div>
+            </div>
+        }
+        
     </section>
   )
 }
