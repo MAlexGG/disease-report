@@ -41,7 +41,7 @@ function StartNow() {
             <div className={styles.ctCardsSection}>
             {
                 data.map((e, index) => (
-                    <div className={styles.ctCard}>
+                    <div className={styles.ctCard} key={index}>
                         <p>{e.first}</p>
                         <p>{e.second}</p>
                     </div>
