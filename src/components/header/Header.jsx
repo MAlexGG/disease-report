@@ -1,4 +1,3 @@
-import React from 'react'
 import styles from './Header.module.css'
 import { Link, NavLink } from 'react-router'
 import logo from '../../assets/img/logo.jpg'
