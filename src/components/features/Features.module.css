@@ -1,0 +1,24 @@
+.ctFeatures{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 50px;
+}
+
+.ctText{
+    width: 50%;
+    margin: 50px;
+}
+
+.ctText h2{
+    font-size: var(--l-font);
+}
+
+.ctCards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}

@@ -5,11 +5,14 @@
   --blue-color: #1976D2;
   --green-color: #00897B;
   --grey-color: #455A64;
+  --light-grey-color: #bbbbbb;
   --red-color: #BA1A1A;
   --transparency-grey: 55, 55, 55, 0.2;
 
   --s-font: 1.1rem;
-  --l-font: 2.5rem;
+  --m-font: 1.5rem;
+  --l-font: 2rem;
+  --xl-font: 2.5rem;
 
 }
 
@@ -22,4 +25,8 @@ body {
 *{
   font-size: 16px;
   box-sizing: border-box;
+}
+
+p{
+  color: var(--grey-color);
 }

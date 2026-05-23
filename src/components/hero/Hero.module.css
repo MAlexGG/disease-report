@@ -3,13 +3,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: var(--light-color);
     background: linear-gradient(196deg,rgba(230, 246, 255, 1) 0%, rgba(255, 255, 255, 1) 100%);
     padding: 50px;
 }
 
 h1{
-    font-size: var(--l-font);
+    font-size: var(--xl-font);
 }
 
 .ctHero p{

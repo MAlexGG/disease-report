@@ -6,6 +6,8 @@
     height: 80px;
     padding: 10px 30px;
     box-shadow: 0 5px 5px rgba(var(--transparency-grey));
+    position: relative;
+    z-index: 1;
 }
 
 .ctNav{

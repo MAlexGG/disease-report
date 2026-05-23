@@ -32,16 +32,11 @@
 .ctResource{
     display: flex;
     flex-direction: column;
-    color: var(--grey-color);
 }
 
 .ctResource a{
     margin: 10px 0;
     text-decoration: none;
-    color: var(--grey-color);
-}
-
-.ctSectionCopyright p{
     color: var(--grey-color);
 }
 
