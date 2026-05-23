@@ -22,3 +22,16 @@
     align-items: center;
     gap: 20px;
 }
+
+@media (max-width: 780px) {
+    .ctFeatures{
+        margin: 10px;
+    }
+    .ctText{
+        width: 90%;
+        margin: 25px 10px;
+    }
+    .ctCards{
+        flex-direction: column;
+    }
+}

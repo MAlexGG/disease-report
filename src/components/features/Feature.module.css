@@ -21,3 +21,17 @@
 .ctFeature p{
     margin: 0;
 }
+
+@media (max-width: 1200px) {
+    .ctFeature{
+        width: 30%;
+        height: 350px;
+    }
+}
+
+@media (max-width: 780px) {
+    .ctFeature{
+        width: 90%;
+        height: 300px;
+    }
+}

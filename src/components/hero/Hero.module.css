@@ -6,6 +6,7 @@
     background: linear-gradient(196deg,rgba(230, 246, 255, 1) 0%, rgba(255, 255, 255, 1) 100%);
     padding: 50px;
     width: 100%;
+    text-align: center;
 }
 
 h1{
@@ -24,6 +25,7 @@ h1{
     align-items: center;
     gap: 10px;
     margin: 20px;
+    width: 30%;
 }
 
 .ctImage{
@@ -37,4 +39,15 @@ h1{
     object-fit: cover;
     object-position: center;
     width: 100%;
+}
+
+@media (max-width: 780px) {
+    .ctHero p{
+        width: 90%;
+    }
+
+    .ctButtons{
+        flex-direction: column;
+        width: 90%;
+    }
 }
