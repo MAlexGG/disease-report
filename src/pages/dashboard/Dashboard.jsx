@@ -1,6 +1,7 @@
 import styles from './Dashboard.module.css'
 import GlobalData from "../../components/charts/globalData/GlobalData"
 import { useResponsive } from '../../hooks/useResponsive'
+import TopCountry from '../../components/charts/topCountry/TopCountry';
 
 function Dashboard() {
 
@@ -21,6 +22,10 @@ function Dashboard() {
         }
       </div>
       <GlobalData/>
+      <div className={styles.ctCharts}>
+        <TopCountry/>
+      </div>
+      
     </>
     
   )

@@ -1,0 +1,88 @@
+.TopCountry{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    border: 1px solid var(--light-grey-color);
+    border-radius: 10px;
+}
+
+.TopCountry h3{
+    font-size: var(--l-font);
+    margin: 0;
+    padding: 20px 0 0 20px;
+}
+
+.TopCountry p{
+    margin: 0;
+    padding: 0 0 20px 20px;
+}
+
+.ctTable{
+    border-top: 1px solid var(--light-grey-color);
+    width: 100%;
+    table-layout: fixed; 
+    border-collapse: collapse; 
+}
+
+th:nth-child(1) { width: 25%; }
+th:nth-child(2) { width: 30%; }
+th:nth-child(3) { width: 25%; }
+th:nth-child(4) { width: 20%; }
+
+.ctTable thead{
+    background-color: var(--light-color);
+    height: 50px;
+}
+
+.ctTable th{
+    font-weight: 400;
+    color: var(--grey-color);
+}
+
+.ctTable td{
+    text-align: center;
+}
+
+.ctRows td {
+    padding: 10px;
+    background-clip: padding-box;
+}
+
+.ctRows td:nth-child(1) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.ctRows td:nth-child(3) {
+  color: var(--red-color);
+}
+
+.ctBadge {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.badge{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75px;
+    height: 25px;
+    background-color: var(--transparency-green);
+    color: var(--green-color);
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+@media (max-width: 1024px) {
+    .TopCountry{
+        width: 100%;
+    }
+}
+
+
+

@@ -48,7 +48,6 @@ function GlobalData() {
             allData.map((e, index) => (
                 <GlobalDataCard data={e} key={index}/>
             ))
-
         }
     </section>
   )

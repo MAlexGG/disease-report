@@ -11,3 +11,8 @@ export function formatThousands(value) {
     maximumFractionDigits: 2,
   }).format(value);
 }
+
+export function getRecoveredPercentage(recovered, total) {
+  if (!total) return 0;
+  return Number(((recovered / total) * 100).toFixed(1));
+}
