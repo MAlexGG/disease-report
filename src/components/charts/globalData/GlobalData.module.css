@@ -1,0 +1,14 @@
+.ctCards{
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .ctCards{
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+}

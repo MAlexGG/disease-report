@@ -1,0 +1,17 @@
+.ctDashboard{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 90%;
+    margin: 50px 0;
+}
+
+.ctDashboard h2{
+    font-size: var(--xl-font);
+    margin: 0;
+}
+
+.ctDashboard p{
+    margin: 0;
+}
