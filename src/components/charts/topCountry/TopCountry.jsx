@@ -96,7 +96,7 @@ function TopCountry() {
         <tbody>
           {
             countriesData.map((e, index) => (
-              <tr className={styles.ctRows}>
+              <tr className={styles.ctRows} key={index}>
                 <td><span className={styles.badge}>{e.countryInfo.iso3}</span> {e.country}</td>
                 {
                   !isMobile && <td>{formatThousands(e.cases)}</td>

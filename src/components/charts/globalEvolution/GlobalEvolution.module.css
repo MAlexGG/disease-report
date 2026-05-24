@@ -1,0 +1,23 @@
+.ctGlobalEvolution{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    border: 1px solid var(--light-grey-color);
+    border-radius: 10px;
+}
+
+.ctGlobalEvolution h3{
+    font-size: var(--l-font);
+    margin: 0;
+    padding: 20px 0 0 20px;
+}
+
+.ctChart{
+    padding: 20px;
+}
+
+@media (max-width: 1024px) {
+    .ctGlobalEvolution{
+        width: 100%;
+    }
+}
