@@ -1,14 +1,23 @@
 import styles from './Dashboard.module.css'
 import GlobalData from "../../components/charts/globalData/GlobalData"
 import { useResponsive } from '../../hooks/useResponsive'
+import { apiService } from '../../services/apiService'
 import TopCountry from '../../components/charts/topCountry/TopCountry';
+import { useEffect, useState } from 'react';
 /* import GlobalEvolution from '../../components/charts/globalEvolution/GlobalEvolution'; */
 
 function Dashboard() {
 
   const { isDesktop } = useResponsive();
+  const api = apiService();
+  const [countries, setCountries] = useState(0);
 
-
+  useEffect(() => {
+    api.getAll().then(res => {
+      setCountries(res.data.affectedCountries)
+    }).catch(error => console.log(error))
+  }, [])
+  
   return (
     <>
       <div className={styles.ctDashboard}>
@@ -18,7 +27,7 @@ function Dashboard() {
           isDesktop &&
           <div className={styles.ctChartTotalCountries}>
             <h6>Affected Countries</h6>
-            <p>231</p>
+            <p>{countries}</p>
           </div>
         }
       </div>
