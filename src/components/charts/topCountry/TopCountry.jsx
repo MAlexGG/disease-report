@@ -3,6 +3,7 @@ import styles from './TopCountry.module.css'
 import { formatNumber, formatThousands, getRecoveredPercentage } from '../../../utils/formatNumber';
 import { useResponsive } from '../../../hooks/useResponsive'
 import { apiService } from '../../../services/apiService';
+import Loader from '../../loader/Loader';
 
 function TopCountry() {
 
@@ -21,7 +22,8 @@ function TopCountry() {
     <section className={styles.TopCountry}>
       <h3>Top Countries by Cases</h3>
       <p>Filtered by 24-hour transmission rate.</p>
-      <table className={styles.ctTable}>
+      { !countriesData ? <Loader/> :
+        <table className={styles.ctTable}>
         <thead>
           <tr>
             <th>COUNTRY</th>
@@ -50,6 +52,7 @@ function TopCountry() {
           }
         </tbody>
       </table>
+      }
     </section>
   )
 }

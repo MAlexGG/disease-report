@@ -1,6 +1,8 @@
 .ctGlobalEvolution{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 50%;
     border: 1px solid var(--light-grey-color);
     border-radius: 10px;
@@ -13,6 +15,7 @@
 }
 
 .ctChart{
+    width: 100%;
     padding: 20px;
     margin-top: 30px;
 }

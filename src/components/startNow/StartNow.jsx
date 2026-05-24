@@ -12,7 +12,7 @@ const data = [
         second: "REQUEST/DAY"
     },
     {
-        first: "215",
+        first: "231",
         second: "COUNTRIES"
     },
     {

@@ -3,7 +3,7 @@ import styles from './GlobalEvolution.module.css'
 import { LineChart } from "@mui/x-charts"
 import { formatNumber } from "../../../utils/formatNumber";
 import { apiService }from '../../../services/apiService'
-
+import Loader from '../../loader/Loader'
 
 
 function GlobalEvolution() {
@@ -29,7 +29,7 @@ function GlobalEvolution() {
     <div className={styles.ctGlobalEvolution}>
         <h3>180-Day Timeline</h3>
         {
-            !chartData ? <p>Loading chart...</p> : 
+            !chartData ? <Loader/> : 
             <LineChart
                 className={styles.ctChart}
                 height={450}
