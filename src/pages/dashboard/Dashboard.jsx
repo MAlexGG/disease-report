@@ -2,7 +2,7 @@ import styles from './Dashboard.module.css'
 import GlobalData from "../../components/charts/globalData/GlobalData"
 import { useResponsive } from '../../hooks/useResponsive'
 import TopCountry from '../../components/charts/topCountry/TopCountry';
-import GlobalEvolution from '../../components/charts/globalEvolution/GlobalEvolution';
+/* import GlobalEvolution from '../../components/charts/globalEvolution/GlobalEvolution'; */
 
 function Dashboard() {
 
@@ -25,7 +25,7 @@ function Dashboard() {
       <GlobalData/>
       <div className={styles.ctCharts}>
         <TopCountry/>
-        <GlobalEvolution/>
+        {/* <GlobalEvolution/> */}
       </div>
       
     </>

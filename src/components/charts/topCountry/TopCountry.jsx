@@ -102,9 +102,7 @@ function TopCountry() {
                   !isMobile && <td>{formatThousands(e.cases)}</td>
                 }
                 <td>{formatNumber(e.deaths)}</td>
-                <span className={styles.ctBadge}>
-                  <td className={styles.badge}>{getRecoveredPercentage(e.recovered, e.cases)}%</td>
-                </span>
+                <td className={styles.badge}>{getRecoveredPercentage(e.recovered, e.cases)}%</td>
               </tr>
             ))
           }

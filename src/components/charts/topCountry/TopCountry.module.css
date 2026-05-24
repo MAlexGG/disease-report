@@ -45,7 +45,6 @@ th:nth-child(4) { width: 20%; }
 
 .ctRows td {
     padding: 10px;
-    background-clip: padding-box;
 }
 
 .ctRows td:nth-child(1) {
@@ -59,23 +58,25 @@ th:nth-child(4) { width: 20%; }
   color: var(--red-color);
 }
 
-.ctBadge {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .badge{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 75px;
+    width: 90%;
     height: 25px;
     background-color: var(--transparency-green);
     color: var(--green-color);
     border-radius: 10px;
     font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .ctRows td:nth-child(2) {
+        color: var(--red-color);
+    }
+    .ctRows td:nth-child(3) {
+        color: var(--green-color);
+    }
 }
 
 @media (max-width: 1024px) {
