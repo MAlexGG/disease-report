@@ -24,8 +24,8 @@
     border-collapse: collapse; 
 }
 
-th:nth-child(1) { width: 25%; }
-th:nth-child(2) { width: 30%; }
+th:nth-child(1) { width: 30%; }
+th:nth-child(2) { width: 25%; }
 th:nth-child(3) { width: 25%; }
 th:nth-child(4) { width: 20%; }
 
@@ -49,7 +49,7 @@ th:nth-child(4) { width: 20%; }
 
 .ctRows td:nth-child(1) {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   gap: 10px;
 }
@@ -58,11 +58,17 @@ th:nth-child(4) { width: 20%; }
   color: var(--red-color);
 }
 
+.ctRows td:nth-child(4) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .badge{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 90%;
+    width: 70px;
     height: 25px;
     background-color: var(--transparency-green);
     color: var(--green-color);
@@ -76,7 +82,13 @@ th:nth-child(4) { width: 20%; }
     }
     .ctRows td:nth-child(3) {
         color: var(--green-color);
+        display: flex;
+        justify-content: center;
     }
+
+    th:nth-child(1) { width: 30%; }
+    th:nth-child(2) { width: 40%; }
+    th:nth-child(3) { width: 30%; }
 }
 
 @media (max-width: 1024px) {

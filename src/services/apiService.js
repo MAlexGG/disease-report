@@ -9,6 +9,11 @@ export const apiService = () => {
         return response;
     }
 
+    const getByCountry = () => {
+        const response = axios.get("/countries?sort=cases");
+        return response;
+    }
+
     const getHistorical = () => {
         const response = axios.get("/historical/all?lastdays=120");
         return response;
@@ -16,6 +21,7 @@ export const apiService = () => {
 
     return {
         getAll,
+        getByCountry,
         getHistorical
     }
 }

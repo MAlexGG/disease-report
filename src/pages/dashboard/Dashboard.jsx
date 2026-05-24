@@ -1,10 +1,10 @@
+import { useEffect, useState } from 'react'
 import styles from './Dashboard.module.css'
-import GlobalData from "../../components/charts/globalData/GlobalData"
 import { useResponsive } from '../../hooks/useResponsive'
 import { apiService } from '../../services/apiService'
-import TopCountry from '../../components/charts/topCountry/TopCountry';
-import { useEffect, useState } from 'react';
-/* import GlobalEvolution from '../../components/charts/globalEvolution/GlobalEvolution'; */
+import GlobalData from "../../components/charts/globalData/GlobalData"
+import TopCountry from '../../components/charts/topCountry/TopCountry'
+import GlobalEvolution from '../../components/charts/globalEvolution/GlobalEvolution'
 
 function Dashboard() {
 
@@ -34,7 +34,7 @@ function Dashboard() {
       <GlobalData/>
       <div className={styles.ctCharts}>
         <TopCountry/>
-        {/* <GlobalEvolution/> */}
+        <GlobalEvolution/>
       </div>
       
     </>
