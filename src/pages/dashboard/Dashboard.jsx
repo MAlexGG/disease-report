@@ -5,6 +5,7 @@ import { apiService } from '../../services/apiService'
 import GlobalData from "../../components/charts/globalData/GlobalData"
 import TopCountry from '../../components/charts/topCountry/TopCountry'
 import GlobalEvolution from '../../components/charts/globalEvolution/GlobalEvolution'
+import WorldMap from '../../components/charts/worldMap/WorldMap'
 
 function Dashboard() {
 
@@ -23,19 +24,20 @@ function Dashboard() {
       <div className={styles.ctDashboard}>
         <h2>Global Analytics Dashboard</h2>
         <p>Real-time epidemiological surveillance and data modeling.</p>
-        {
+        {/* {
           isDesktop &&
           <div className={styles.ctChartTotalCountries}>
             <h6>Affected Countries</h6>
             <p>{countries}</p>
           </div>
-        }
+        } */}
       </div>
-      <GlobalData/>
+      {/* <GlobalData/>
       <div className={styles.ctCharts}>
         <TopCountry/>
         <GlobalEvolution/>
-      </div>
+      </div> */}
+      <WorldMap/>
       
     </>
     
