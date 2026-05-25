@@ -1,6 +1,7 @@
 import styles from './StartNow.module.css'
 import Button from '../button/Button'
 import { useResponsive } from '../../hooks/useResponsive'
+import { useNavigate } from 'react-router';
 
 const data = [
     {
@@ -24,6 +25,15 @@ const data = [
 function StartNow() {
 
     const { isMobile } = useResponsive();
+    let navigate = useNavigate();
+
+    const redirection = () =>  {
+        navigate("/dashboard")
+    }
+
+    const openDocs = () => {
+        window.open('https://disease.sh/docs/', '_blank', 'noopener,noreferrer');
+    }
 
 
   return (
@@ -32,8 +42,8 @@ function StartNow() {
             <h2>Start Analyzing Now</h2>
             <p>Join a global network of researchers and analysts using our suite to monitor, predict, and combat disease outbreaks. Our tools are free for researchers and non-profit organizations.</p>
             <div className={styles.ctButtons}>
-                <Button fill>Launch Dashboard</Button>
-                <Button>View Documentation</Button>
+                <Button fill handleClick={redirection}>Launch Dashboard</Button>
+                <Button handleClick={openDocs}>View Documentation</Button>
             </div>
         </div>
         {
