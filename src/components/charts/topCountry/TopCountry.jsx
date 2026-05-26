@@ -43,7 +43,7 @@ function TopCountry() {
                   <td><span className={styles.badge}>{e.countryInfo.iso3}</span> {e.country}</td>
                 }
                 {
-                  isMobile ? null : <td>{formatThousands(e.cases)}</td>
+                  isMobile ? null : <td>{formatThousands(e.cases, 0, 0)}</td>
                 }
                 <td>{formatNumber(e.deaths)}</td>
                 <td><span className={styles.badge}>{getRecoveredPercentage(e.recovered, e.cases)}%</span></td>

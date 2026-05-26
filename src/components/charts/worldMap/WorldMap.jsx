@@ -15,9 +15,15 @@ function WorldMap() {
     useEffect(() => {
         mock.map(c => {
             setCountriesCovidMapData((prevItems) => [...prevItems, {
+                flag: c.countryInfo.flag,
                 iso3: c.countryInfo.iso3,
+                country: c.country,
+                population: c.population,
                 cases: c.cases,
-                country: c.country
+                deaths: c.deaths,
+                recovered: c.recovered,
+                active: c.active,
+                critical: c.critical
             }])
         })
     }, []);
@@ -58,8 +64,8 @@ function WorldMap() {
     }
 
   return (
-    <>
-        <ComposableMap projectionConfig={{ scale: 200 }} className={styles.ctWorld}>
+    <section className={styles.ctWorld}>
+        <ComposableMap projectionConfig={{ scale: 200 }} className={styles.ctMap}>
             <ZoomableGroup
                 zoom={position.zoom}
                 center={position.coordinates}
@@ -97,14 +103,16 @@ function WorldMap() {
                 </Geographies>
             </ZoomableGroup>
         </ComposableMap>
-        <button onClick={handleZoomIn}>+</button>
-        <button onClick={handleZoomOut}>-</button>
+        <div className={styles.ctButtons}>
+            <button onClick={handleZoomIn}>+</button>
+            <button onClick={handleZoomOut}>-</button>
+        </div>
         {
             open && selectedCountry && (
                 <Modal open={open} setOpen={setOpen} selectedCountry={selectedCountry}/>
             )
         }
-    </>
+    </section>
   )
 }
 
