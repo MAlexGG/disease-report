@@ -4,6 +4,7 @@ import { ComposableMap, Geographies, Geography, Graticule, ZoomableGroup } from 
 import map from '../../../assets/data/mapData.json'
 import mock from '../../../assets/data/mockCountriesMap.json'
 import Modal from './Modal'
+import RoundButton from '../../button/RoundButton'
 
 function WorldMap() {
 
@@ -28,17 +29,17 @@ function WorldMap() {
         })
     }, []);
     
-    function handleZoomIn() {
+    const handleZoomIn = () => {
         if (position.zoom >= 4) return;
         setPosition((pos) => ({ ...pos, zoom: pos.zoom * 2 }));
     }
 
-    function handleZoomOut() {
+    const handleZoomOut = () => {
         if (position.zoom <= 1) return;
         setPosition((pos) => ({ ...pos, zoom: pos.zoom / 4 }));
     }
 
-    function handleMoveEnd(position) {
+    const handleMoveEnd = (position) => {
         setPosition(position);
     }
 
@@ -104,8 +105,8 @@ function WorldMap() {
             </ZoomableGroup>
         </ComposableMap>
         <div className={styles.ctButtons}>
-            <button onClick={handleZoomIn}>+</button>
-            <button onClick={handleZoomOut}>-</button>
+            <RoundButton handleClick={handleZoomOut}>-</RoundButton>
+            <RoundButton handleClick={handleZoomIn}>+</RoundButton>
         </div>
         {
             open && selectedCountry && (

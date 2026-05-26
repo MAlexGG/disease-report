@@ -59,3 +59,15 @@
 .ctInfo p{
     margin: 5px;
 }
+
+@media (max-width: 1024px) {
+    .ctModal{
+        width: 30%;
+    }
+}
+
+@media (max-width: 768px) {
+    .ctModal{
+        width: 65%;
+    }
+}
