@@ -22,13 +22,13 @@ function TopCountry() {
     <section className={styles.TopCountry}>
       <h3>Top Countries by Cases</h3>
       <p>Filtered by 24-hour transmission rate.</p>
-      { !countriesData ? <Loader/> :
+      { countriesData ?
         <table className={styles.ctTable}>
         <thead>
           <tr>
             <th>COUNTRY</th>
             {
-              !isMobile && <th>CASES</th>
+              isMobile ? null : <th>CASES</th>
             }
             <th>DEATHS</th>
             <th>RECOVERY RATE</th>
@@ -43,7 +43,7 @@ function TopCountry() {
                   <td><span className={styles.badge}>{e.countryInfo.iso3}</span> {e.country}</td>
                 }
                 {
-                  !isMobile && <td>{formatThousands(e.cases)}</td>
+                  isMobile ? null : <td>{formatThousands(e.cases)}</td>
                 }
                 <td>{formatNumber(e.deaths)}</td>
                 <td><span className={styles.badge}>{getRecoveredPercentage(e.recovered, e.cases)}%</span></td>
@@ -52,6 +52,7 @@ function TopCountry() {
           }
         </tbody>
       </table>
+      : <Loader/> 
       }
     </section>
   )

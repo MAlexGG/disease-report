@@ -29,7 +29,7 @@ function GlobalEvolution() {
     <div className={styles.ctGlobalEvolution}>
         <h3>180-Day Timeline</h3>
         {
-            !chartData ? <Loader/> : 
+            chartData ? 
             <LineChart
                 className={styles.ctChart}
                 height={450}
@@ -75,7 +75,7 @@ function GlobalEvolution() {
                     },
                 },
                 }}
-            />
+            /> : <Loader/>
         }
       
     </div>

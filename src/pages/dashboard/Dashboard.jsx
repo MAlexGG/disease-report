@@ -24,19 +24,19 @@ function Dashboard() {
       <div className={styles.ctDashboard}>
         <h2>Global Analytics Dashboard</h2>
         <p>Real-time epidemiological surveillance and data modeling.</p>
-        {/* {
+        {
           isDesktop &&
           <div className={styles.ctChartTotalCountries}>
             <h6>Affected Countries</h6>
             <p>{countries}</p>
           </div>
-        } */}
+        }
       </div>
-      {/* <GlobalData/>
+      <GlobalData/>
       <div className={styles.ctCharts}>
         <TopCountry/>
         <GlobalEvolution/>
-      </div> */}
+      </div>
       <WorldMap/>
       
     </>

@@ -47,7 +47,7 @@ function StartNow() {
             </div>
         </div>
         {
-            !isMobile &&
+            isMobile ? null :
             <div className={styles.ctCardsSection}>
             {
                 data.map((e, index) => (
