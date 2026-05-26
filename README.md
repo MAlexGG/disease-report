@@ -20,9 +20,7 @@ A modern interactive dashboard built with React that visualizes global COVID-19 
 ### API Used
 This project uses the free public API: https://disease.sh/docs/
 
-It provides:
-
-Global COVID statistics, Country-specific data, Historical evolution data
+It provides: Global COVID statistics, Country-specific data, Historical evolution data.
 
 ### Accessibility
 
@@ -36,14 +34,18 @@ The project includes accessibility improvements:
 ### Installation
 
 Clone repository
+
 ``git clone https://github.com/MAlexGG/disease-report.git``
 
 Go into project
+
 ``cd disease-report``
 
 Install dependencies
+
 ``npm install``
 
 Start development server
+
 ``npm run dev``
 
