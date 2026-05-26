@@ -11,11 +11,11 @@ function Dashboard() {
 
   const { isDesktop } = useResponsive();
   const api = apiService();
-  const [countries, setCountries] = useState(0);
+  const [affectedCountries, setAffectedCountries] = useState(0);
 
   useEffect(() => {
     api.getAll().then(res => {
-      setCountries(res.data.affectedCountries)
+      setAffectedCountries(res.data.affectedCountries)
     }).catch(error => console.log(error))
   }, [])
   
@@ -28,7 +28,7 @@ function Dashboard() {
           isDesktop &&
           <div className={styles.ctChartTotalCountries}>
             <h6>Affected Countries</h6>
-            <p>{countries}</p>
+            <p>{affectedCountries}</p>
           </div>
         }
       </div>

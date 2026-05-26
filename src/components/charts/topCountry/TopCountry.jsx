@@ -7,13 +7,13 @@ import Loader from '../../loader/Loader';
 
 function TopCountry() {
 
-  const [countriesData, setCountriesData] = useState([]);
+  const [countriesCovidData, setCountriesCovidData] = useState([]);
   const { isMobile } = useResponsive();
   const api = apiService();
 
   useEffect(() => {
     api.getByCountry().then(res => {
-      setCountriesData(res.data.slice(0, 10))
+      setCountriesCovidData(res.data.slice(0, 10))
     })
   }, [])
   
@@ -22,7 +22,7 @@ function TopCountry() {
     <section className={styles.TopCountry}>
       <h3>Top Countries by Cases</h3>
       <p>Filtered by 24-hour transmission rate.</p>
-      { countriesData ?
+      { countriesCovidData ?
         <table className={styles.ctTable}>
         <thead>
           <tr>
@@ -36,7 +36,7 @@ function TopCountry() {
         </thead>
         <tbody>
           {
-            countriesData.map((e, index) => (
+            countriesCovidData.map((e, index) => (
               <tr className={styles.ctRows} key={index}>
                 {
                   isMobile ? <td>{e.country}</td> : 

@@ -7,7 +7,7 @@ import Loader from '../../loader/Loader'
 
 
 function GlobalEvolution() {
-  const [chartData, setChartData] = useState(null);
+  const [worldCovidEvolution, setWorldCovidEvolution] = useState(null);
   const api = apiService();
 
   useEffect(() => {
@@ -17,7 +17,7 @@ function GlobalEvolution() {
         const cases = Object.values(res.data.cases);
         const deaths = Object.values(res.data.deaths);
 
-        setChartData({ dates, cases, deaths })
+        setWorldCovidEvolution({ dates, cases, deaths })
     }).catch(error => {
         console.error("Error fetching historical data:", error);
     })
@@ -29,7 +29,7 @@ function GlobalEvolution() {
     <div className={styles.ctGlobalEvolution}>
         <h3>180-Day Timeline</h3>
         {
-            chartData ? 
+            worldCovidEvolution ? 
             <LineChart
                 className={styles.ctChart}
                 height={450}
@@ -37,7 +37,7 @@ function GlobalEvolution() {
                 xAxis={[
                 {
                     scaleType: "point",
-                    data: chartData.dates,
+                    data: worldCovidEvolution.dates,
 
                     tickLabelInterval: (_, index) =>
                     index % 90 === 0,
@@ -53,13 +53,13 @@ function GlobalEvolution() {
 
                 series={[
                 {
-                    data: chartData.cases,
+                    data: worldCovidEvolution.cases,
                     label: "Cases",
                     curve: "monotoneX",
                     color: "#1976D2"
                 },
                 {
-                    data: chartData.deaths,
+                    data: worldCovidEvolution.deaths,
                     label: "Deaths",
                     curve: "monotoneX",
                     color: "#BA1A1A"

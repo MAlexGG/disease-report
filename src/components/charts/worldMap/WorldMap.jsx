@@ -8,13 +8,13 @@ import Modal from './Modal'
 function WorldMap() {
 
     const [position, setPosition] = useState({ coordinates: [0, 0], zoom: 1 });
-    const [data, setData] = useState([]);
+    const [countriesCovidMapData, setCountriesCovidMapData] = useState([]);
     const [selectedCountry, setSelectedCountry] = useState(null);
     const [open, setOpen] = useState(false);
 
     useEffect(() => {
         mock.map(c => {
-            setData((prevItems) => [...prevItems, {
+            setCountriesCovidMapData((prevItems) => [...prevItems, {
                 iso3: c.countryInfo.iso3,
                 cases: c.cases,
                 country: c.country
@@ -45,14 +45,14 @@ function WorldMap() {
         return "#bbbbbb";
     }
 
-    const getCountryData = (iso) => {
-        return data.find(
+    const compareCountryData = (iso) => {
+        return countriesCovidMapData.find(
             (c) => c.iso3 === iso
         );
     };
 
     function handleCountryClick(geo) {
-        const country = getCountryData(geo.id);
+        const country = compareCountryData(geo.id);
         setSelectedCountry(country || null);
         setOpen(true);
     }
@@ -72,7 +72,7 @@ function WorldMap() {
                         ({ geographies }) => geographies.map((geo) => {
                             
                             const iso = geo.id;
-                            const countryData = getCountryData(iso);
+                            const countryData = compareCountryData(iso);
                             const value = countryData?.cases || 0;
 
                             return (

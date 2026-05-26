@@ -7,12 +7,12 @@ import { apiService } from '../../../services/apiService';
 
 function GlobalData() {
 
-    const [allData, setAllData] = useState([]);
+    const [worldCovidData, setWorldCovidData] = useState([]);
     const api = apiService();
 
     useEffect(() => {
         api.getAll().then(res => {
-            setAllData([
+            setWorldCovidData([
                 {
                     icon: "totalCases", 
                     name: "TOTAL CASES",
@@ -45,7 +45,7 @@ function GlobalData() {
   return (
     <section className={styles.ctCards}>
         {
-            allData.map((e, index) => (
+            worldCovidData.map((e, index) => (
                 <GlobalDataCard data={e} key={index}/>
             ))
         }
