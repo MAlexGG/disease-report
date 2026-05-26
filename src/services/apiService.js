@@ -19,9 +19,15 @@ export const apiService = () => {
         return response;
     }
 
+    const getCountriesData = () => {
+        const response = axios.get("https://disease.sh/v3/covid-19/countries");
+        return response;
+    }
+
     return {
         getAll,
         getByCountry,
-        getHistorical
+        getHistorical,
+        getCountriesData
     }
 }

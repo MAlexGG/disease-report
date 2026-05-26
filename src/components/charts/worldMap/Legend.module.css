@@ -1,0 +1,105 @@
+.ctLegend{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 500px;
+    background-color: white;
+    border: 1px solid var(--light-grey-color);
+    border-radius: 10px;
+    box-shadow: 3px 3px 7px rgba(var(--transparency-grey));;
+    padding: 10px 20px;
+}
+
+.ctLegend h6{
+    margin: 10px 0;
+}
+
+.ctInfo{
+    width: 100%;
+}
+
+.ctColors{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.ctText{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+}
+
+.ctText p{
+    margin: 5px 0;
+    font-size: var(--xs-font)
+}
+
+.ctColor{
+    width: 20%;
+    height: 25px;
+}
+
+.c1{
+    background-color: #C2E1F6;
+}
+
+.c2{
+    background-color: #7dbdf9;
+    background-image:
+        linear-gradient(#C2E1F6 1.5px, transparent 1px);
+    background-size: 12px 12px;
+}
+
+.c3{
+    background-color: #559ADD;
+    background-image:
+        linear-gradient(#C2E1F6 1.5px, transparent 1px),
+        linear-gradient(90deg, #C2E1F6 1.5px, transparent 1px);
+    background-size: 12px 12px;
+}
+
+.c4{
+    background-color: #1976D2;
+    background-image: radial-gradient(#C2E1F6 1.5px, transparent 1.5px);
+    background-size: 8px 8px;
+}
+
+.c5{
+    background: repeating-linear-gradient(135deg,
+    #135394,
+    #135394 4px,
+    #C2E1F6 4px,
+    #C2E1F6 6px
+  );
+}
+
+@media (max-width: 768px) {
+    .ctLegend{
+        height: auto;
+        width: auto;
+    }
+
+    .ctInfo{
+        display: flex;
+        align-items: flex-end;
+        gap: 10px;
+    }
+
+    .ctColors{
+        flex-direction: column;
+    }
+
+    .ctColor{
+        width: 50px;
+        height: 20px;
+    }
+
+    .ctText{
+        grid-template-columns: 1fr;
+        grid-template-rows: 20% 20% 20% 20% 20%;
+    }
+}

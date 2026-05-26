@@ -6,6 +6,7 @@ import GlobalData from "../../components/charts/globalData/GlobalData"
 import TopCountry from '../../components/charts/topCountry/TopCountry'
 import GlobalEvolution from '../../components/charts/globalEvolution/GlobalEvolution'
 import WorldMap from '../../components/charts/worldMap/WorldMap'
+import Legend from '../../components/charts/worldMap/Legend'
 
 function Dashboard() {
 
@@ -24,21 +25,27 @@ function Dashboard() {
       <div className={styles.ctDashboard}>
         <h2>Global Analytics Dashboard</h2>
         <p>Real-time epidemiological surveillance and data modeling.</p>
-        {/* {
+        {
           isDesktop &&
           <div className={styles.ctChartTotalCountries}>
             <h6>Affected Countries</h6>
             <p>{affectedCountries}</p>
           </div>
-        } */}
+        }
       </div>
-      {/* <GlobalData/>
+      <GlobalData/>
+      <div className={styles.ctMap}>
+        <div className={styles.ctText}>
+          <h3>Global Infection Density</h3>
+          <p>Heatmap visualization of confirmed active cases by region.</p>
+        </div>
+        <WorldMap/>
+        <Legend/>
+      </div>
       <div className={styles.ctCharts}>
         <TopCountry/>
         <GlobalEvolution/>
-      </div> */}
-      <WorldMap/>
-      
+      </div>
     </>
     
   )

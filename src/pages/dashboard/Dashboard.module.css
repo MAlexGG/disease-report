@@ -17,6 +17,35 @@
     margin: 0;
 }
 
+.ctMap{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: var(--light-color);
+    padding: 50px;
+    margin: 50px 0;
+    gap: 15px;
+}
+
+.ctText{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.ctText h3{
+    font-size: var(--l-font);
+    margin: 0;
+}
+
+.ctText p{
+    margin: 5px 0 20px 0;
+}
+
 .ctChartTotalCountries{
     display: flex;
     justify-content: center;
@@ -52,5 +81,11 @@
 @media (max-width: 1024px) {
     .ctCharts{
         flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    .ctMap{
+        align-items: flex-start;
     }
 }
